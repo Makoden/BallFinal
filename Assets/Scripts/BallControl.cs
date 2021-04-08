@@ -7,7 +7,7 @@ public class BallControl : MonoBehaviour
 {
     public float moveStrength;
     public float jumpStrength;
-    
+ 
     bool isGrounded;
     public float maxSpeed;
     Vector3 lastGoodPos;

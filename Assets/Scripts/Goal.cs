@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+
 
 public class Goal : MonoBehaviour
 {
 
-    // Update is called once per frame
-    void Update()
+ 
+  
+    public Text endGameText;
+  
+    public void OnTriggerEnter(Collider other)
     {
-    void OnTriggerEnter(Collider other)
-        {
             if (other.gameObject.name == "Player")
             {
-                Debug.Log("Congratulations. You've beat the game!");
-             
+              endGameText.text = "Congratulations! You've finished the game! Press R to restart.";
             }
-        }
+        
     }
+
 }

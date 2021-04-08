@@ -6,6 +6,8 @@ public class CheckpointManager : MonoBehaviour
 {
     public GameObject player;
     private Vector3 lastCheckpoint;
+    public ScoreScript Score_Script;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class CheckpointManager : MonoBehaviour
         {
             other.transform.position = lastCheckpoint;
             Debug.Log("Reset ball to checkpoint");
+            Score_Script.UpdatePlayerLives(-1);
         }
     }
 }
